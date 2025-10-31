@@ -1,5 +1,4 @@
-from os import cpu_count
-#import art
+import art
 import random
 
 Cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
@@ -35,9 +34,8 @@ def compare(player_score, cpu_score):
 
 restart = 'y'
 while restart != 'n':
-  #print(art.logo)
-  print("logo")
-
+  print(art.logo)
+  
   #First deal
   player_hand = [random.choice(Cards), random.choice(Cards)]
   cpu_hand = [random.choice(Cards), random.choice(Cards)]
@@ -62,7 +60,7 @@ while restart != 'n':
   player_final_score = score_calc(player_hand)
   cpu_final_score = score_calc(cpu_hand)
   print(f"Your final hand: {player_hand} ---> {player_final_score}")
-  print(f"Computer´s final hand: {cpu_hand} ---> {cpu_final_score}")
+  print(f"Computer's final hand: {cpu_hand} ---> {cpu_final_score}")
 
   print(compare(player_final_score,cpu_final_score))
 
